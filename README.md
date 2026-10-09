@@ -1,43 +1,20 @@
 # Ogre Jungle Run
 
-**Ogre Jungle Run** is a 2D pixel-art platformer built in **Godot 4**. The player controls a green armored ogre exploring hostile jungle ruins, temples, shops, towers and volcanic areas while fighting explorers, gorillas, statues, bats, bosses and other enemies.
-
-The project began as a very small movement prototype and has gradually grown into a multi-level game with combat, equipment, shops, XP, coins, bosses, weapon slots, editable level scenes and an original soundtrack.
+2D pixel-art platformer built in Godot 4. The player controls an ogre exploring hostile jungle ruins areas while fighting explorers, various animals, bosses and other enemies.
 
 > Current version: **v1.27**
 
-## Core gameplay
-
-- 2D pixel-art platforming
-- A / D movement
-- Space to jump, including variable jump height
-- Left Shift to sprint (+30% movement speed while held)
-- Coyote time and optional double jump
-- Left mouse button to attack with the selected weapon
-- 1-9 to select unlocked weapon slots
-- E to interact with shop items and chests
-- ESC to pause
-- Lives, HP, ATK, DEF, XP and coin systems
-- Critical hits
-- Melee and projectile weapons
-- One-way platforms
-- Multiple enemy types and bosses
-- Persistent coin pickups during a run
-- Forward and backward tunnels between levels
-- Shop equipment with visible gear on the Ogre
-- Visual level editing through Godot scenes
-
 ## Credits
 
-**Alpha testers:** Fino and Miroma  
-**Bug Finder:** StCrown
+**Alpha testers:** StCrown, Fino, Miroma, Coirato
+**Bug Finders:** StCrown
 
-## Project evolution / version history
+## Version history
 
 ### First prototype
-The original concept was a 2D pixel-style platformer set in a jungle. The player was a green armored ogre holding a wooden club. Platforms were tree trunks and the first enemies were human explorers carrying torches. The first playable prototype included A/D movement, Space to jump, left-click club attacks, enemy patrols, pits that killed the player, and a tunnel at the end of a single level.
+The original concept was a 2D pixel-style platformer set in a jungle. The player was a ogre holding a wooden club. Platforms were tree trunks and the first enemies were human explorers carrying torches. The first playable prototype included A/D movement, Space to jump, left-click club attacks, enemy patrols, pits that killed the player, and a tunnel at the end of a single level.
 
-### v2
+### v1.2
 - Added procedural movement, jump, attack, hurt and death animations.
 - Improved jungle scenery with trees, roots, vines and vegetation.
 - Added fullscreen mode.
@@ -49,20 +26,20 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Torch explorers dealt 10 damage.
 - Falling into pits consumed a life and restarted the level.
 
-### v3
+### v1.3
 - Fixed player attacks not damaging enemies reliably.
 - Fixed the player becoming frozen after respawning.
 - Redesigned the Ogre into a side-profile character.
 - Improved running and jumping poses.
 
-### v4
+### v1.4
 - Simplified the HUD so only lives were shown.
 - Lives were represented with heart icons.
 - Made the wooden club smaller and more believable.
 - Shifted the art direction toward a darker, more hostile forest.
 - Made the Ogre more intimidating.
 
-### v5
+### v1.5
 - Moved the overall presentation closer to pixel art.
 - Added pixel-art backgrounds.
 - Player could move while attacking.
@@ -76,7 +53,7 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Added variable jump height depending on how long Space is held.
 - Changed lives to red pixel hearts.
 
-### v6
+### v1.6
 - Increased spear-enemy attack range.
 - Adjusted platform spacing.
 - Generated darker pixel-art jungle backgrounds.
@@ -86,7 +63,7 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Added gorillas that attack with their arms and launch the player upward.
 - Increased Level 3 platforming difficulty.
 
-### v7
+### v1.7
 - Added a title screen with PLAY and QUIT.
 - Added low-volume forest ambience.
 - Added blood effects.
@@ -106,7 +83,7 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Refined platform consistency.
 - Reworked Level 3 into a tower/temple climb ending in an aerial Tiger boss arena.
 
-### v8
+### v1.8
 - Fixed unreachable platforms in Level 3.
 - Enlarged the wooden club slightly.
 - Reworked the game further toward true pixel art.
@@ -115,7 +92,7 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Added a visible XP progress bar.
 - Critical hits were changed to 200% normal damage.
 
-### v9
+### v1.9
 - Slowed the Tiger boss.
 - Enlarged and improved access to the boss arena.
 - Made the XP bar smaller.
@@ -128,7 +105,7 @@ The original concept was a 2D pixel-style platformer set in a jungle. The player
 - Added an ESC pause menu with CONTINUE, RESTART and QUIT.
 - Converted game UI wording to English.
 
-### v10
+### v1.10
 - Reduced overall audio volume.
 - Removed an unwanted bush/vegetation ambience sound.
 - Made torch flames visible again.
@@ -256,7 +233,6 @@ This version was intentionally rebuilt from v10 with only a small set of changes
 - No public v1.23 package was produced; numbering moved directly to v1.24.
 
 ### v1.24
-- Credits changed to: **Alpha testers: Fino and Miroma — Bug Finder: StCrown**.
 - Changed the shop XP icon from a coin-like symbol to an XP symbol.
 - Player rendering was moved in front of tunnels so entry looks visually correct.
 - Level transitions place the player close to the corresponding tunnel exit instead of too far forward/back.
@@ -296,53 +272,14 @@ Major systems/balance update:
 - Added an original JRPG-inspired background track rather than copyrighted Persona music.
 
 ### v1.27
-- **Converted Levels 1-7 from code-only layouts into real editable Godot .tscn scenes.**
-- Platforms can now be selected, dragged, resized and rotated visually in the Godot 2D editor.
-- Added editor markers for enemies, coins, tunnels, bosses, chests, shop objects, hearts and other gameplay objects.
-- Added `LEVEL_DESIGN_GUIDE.txt` explaining visual level editing.
 - Extended the original soundtrack to roughly 96 seconds with more variation.
 - Redesigned the Ogre with a slimmer pixel-art silhouette.
 - Added Left Shift sprint: **+30% move speed only while Shift is held**.
 - Removed the DOUBLE text from double jumps.
 - Reduced coyote time and made coyote jumps slightly weaker so they no longer feel overpowered.
 
-## Visual level editing in v1.27
 
-Open the project in Godot and go to:
-
-```
-res://levels/
-```
-
-You can directly open:
-
-```
-level_1.tscn
-level_2.tscn
-level_3.tscn
-level_4.tscn
-level_5.tscn
-level_6.tscn
-level_7.tscn
-```
-
-In the **2D** workspace:
-- Drag Platform nodes with the Move tool.
-- Change **Log Size** in the Inspector.
-- Rotate platforms with Transform / rotation handles.
-- Duplicate platforms with **Ctrl+D**.
-- Drag gameplay markers to reposition coins, enemies, bosses and tunnels.
-- Edit patrol boundaries in marker properties.
-
-See **LEVEL_DESIGN_GUIDE.txt** for the full workflow.
-
-## Engine
-
-- Godot 4
-- GDScript
-- Pixel-art-oriented rendering / nearest filtering
-- Windows export supported through Godot export templates
 
 ## Status
 
-This is an actively developed indie prototype. v1.27 focuses heavily on making future level design easier by moving the layouts into visual Godot scenes rather than hard-coded coordinates.
+This is an actively developed indie prototype.
